@@ -61,13 +61,29 @@ You will need to install the following locally:
 ## Monthly Cost Analysis
 Complete a month cost analysis of each Azure resource to give an estimate total cost using the table below:
 
-| Azure Resource            | Service Tier | Monthly Cost |
-| ------------------------- | ------------ | ------------ |
-| *Azure Postgres Database* |  Standard    |  $16.09      |
-| *Azure Service Bus*       |  Basic       |  $0.05/1M operations  |
-| *Azure Storage account*       |  Standard (Hot)      |  $0.05/1M operations  |
-|  Azure App Service        |  Basic (B1)            |  $12.41            |
-|  Azure Function           |  Consumption Plan            |       $0.20 per million executions       |
+| Azure Resource            | Service Tier      | Monthly Cost                  |
+| ------------------------- | ------------      | ----------------------------- |
+| *Azure Postgres Database* |  Standard         |  $16.09                       |
+| *Azure Service Bus*       |  Basic            |  $0.05/1M operations          |
+| *Azure Storage account*   |  Standard (Hot)   |  $0.05/1M operations          |
+|  Azure App Service        |  Basic (B1)       |  $12.41                       |
+|  Azure Function           |  Consumption Plan |  $0.20 per million executions |
 
 ## Architecture Explanation
-This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+In my project I don't change the structure of the project which show on udacity instruction and only use free and lowest cost I can choose.
+
+
+- Azure Function: 
+
+Azure Functions makes the app development process more productive, and lets you launch serverless applications on Microsoft Azure. It helps in processing data, coordinating with different systems for loT, integrating various processes and systems and building simple APIs and microservices.
+It is autoscalable and allow to handle a huge peak of activity, the web app can't do this cost-effectively. This also, allows to do a division of concerns and create a service for email sending
+
+To Increase this project performace you can use premium version to budget save and better performace.
+
+- Azure services
+I choose cheapest options to save money because this project is small but you can change to other options for performance like B3 App service plan.
+
+- Service Bus
+Microsoft Azure Service Bus is a fully managed enterprise integration message broker. Service Bus can decouple applications and services.
+Service Bus offers a reliable and secure platform for asynchronous transfer of data and state.
+
