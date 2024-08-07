@@ -84,19 +84,22 @@ By using Azure Service Bus Queue, the architecture achieves loose coupling betwe
 
 The use of Azure Functions to process messages from the Service Bus Queue allows for asynchronous email sending. This means the web app doesn't have to wait for the email to be sent, improving its responsiveness and user experience
 
-- Azure services
+- Azure services:
+  
 I choose cheapest options to save money because this project is small but you can change to other options for performance like B3 App service plan.
 The Basic B1 tier has limited CPU and memory resources, which may not be sufficient for applications with high traffic or resource-intensive operations.
 Scalability Issues: Inadequate scaling capabilities can lead to performance bottlenecks and increased latency, contributing to HTTP timeout errors during peak usage times.
 
-- Service Bus
+- Service Bus:
+  
 Microsoft Azure Service Bus is a fully managed enterprise integration message broker. Service Bus can decouple applications and services.
 Service Bus offers a reliable and secure platform for asynchronous transfer of data and state.
 
 The Basic tier lacks some advanced features available in higher tiers, such as message sessions, transactions, and duplicate detection.
 Message Processing Delays: If the service bus is under heavy load or if there are inefficient message processing practices, it can cause delays, leading to timeout errors for services dependent on timely message processing.
 
-- Azure Postgres Database 
+- Azure Postgres Database :
+  
 Performance Issues: The Standard tier might not provide sufficient performance for applications with high query volumes or complex transactions, leading to slow response times.
 Timeouts: If the database queries take too long to execute due to performance limitations, it can cause HTTP timeout errors on the client side, especially for applications that require real-time data retrieval.
 
