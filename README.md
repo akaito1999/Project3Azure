@@ -61,13 +61,13 @@ You will need to install the following locally:
 ## Monthly Cost Analysis
 Complete a month cost analysis of each Azure resource to give an estimate total cost using the table below:
 
-| Azure Resource            | Service Tier      | Monthly Cost                  |
-| ------------------------- | ------------      | ----------------------------- |
-| *Azure Postgres Database* |  Standard         |  $16.09                       |
-| *Azure Service Bus*       |  Basic            |  $0.05/1M operations          |
-| *Azure Storage account*   |  Standard (Hot)   |  $0.05/1M operations          |
-|  Azure App Service        |  Basic (B1)       |  $12.41                       |
-|  Azure Function           |  Consumption Plan |  $0.20 per million executions |
+| Azure Resource            | Service Tier      | Monthly Cost                    |
+| ------------------------- | ------------      | -----------------------------   |
+| *Azure Postgres Database* |  Standard         |  $13.215                        |
+| *Azure Service Bus*       |  Basic            |  $0.05/1M operations            |
+| *Azure Storage account*   |  Standard (Hot)   |  $2.88            |
+|  Azure App Service        |  Basic (B1)       |  $12.41                         |
+|  Azure Function           |  Consumption Plan |  $15.40 for 10000000 Executions |
 
 ## Architecture Explanation
 In my project I don't change the structure of the project which show on udacity instruction and only use free and lowest cost I can choose.
