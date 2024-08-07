@@ -69,8 +69,6 @@ def notification():
             db.session.add(notification)
             db.session.commit()
             
-
-
             ##################################################
             ## TODO: Refactor This logic into an Azure Function
             ## Code below will be replaced by a message queue

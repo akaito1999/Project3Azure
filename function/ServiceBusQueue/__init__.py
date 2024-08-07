@@ -22,7 +22,7 @@ def main(msg: ServiceBusMessage):
     cursor = connection.cursor()
     
     try:
-        # Get notification message and subject from database using the notification_id
+       # TODO:  Get notification message and subject from database using the notification_id
         cursor.execute( '''SELECT subject, message
                           FROM notification
                           WHERE id = {}
@@ -30,14 +30,14 @@ def main(msg: ServiceBusMessage):
         
         notification = cursor.fetchone()
         
-        # Get attendees email and name
+       # TODO: Get attendees email and name
         cursor.execute('''SELECT first_name, last_name, email
                           FROM attendee
                        ''')
         
         attendees = cursor.fetchall()
         
-        # Loop through each attendee and send an email with a personalized subject
+        # TODO:  Loop through each attendee and send an email with a personalized subject
         for attendee in attendees:
             first_name = attendee[0]
             last_name = attendee[1]
@@ -46,7 +46,7 @@ def main(msg: ServiceBusMessage):
             subject = '{} {}: {}'.format(first_name, last_name, notification[0])
             send_email(email, subject, notification[1])
         
-        # Update the notification table by setting the completed date and updating the status with the total number of attendees notified
+        # TODO:  Update the notification table by setting the completed date and updating the status with the total number of attendees notified
         notification_status = 'Notified {} attendees'.format(len(attendees))
         cursor.execute('''UPDATE notification 
                           SET status = '{}', completed_date = '{}' 
