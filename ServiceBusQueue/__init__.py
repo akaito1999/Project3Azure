@@ -14,10 +14,10 @@ def main(msg: ServiceBusMessage):
     notification_id = int(msg.get_body().decode('utf-8'))
     logging.info('Python ServiceBus queue trigger processed message: %s', notification_id)
     
-    connection = psycopg2.connect(dbname= os.getenv("DATABASE_NAME"),
-                                  user= os.getenv("DATABASE_USER"),
-                                  password= os.getenv("DATABASE_PASSWORD"),
-                                  host= os.getenv("DATABASE_HOSTNAME"))
+    connection = psycopg2.connect(dbname= os.getenv("POSTGRES_DB"),
+                                  user= os.getenv("POSTGRES_USER"),
+                                  password= os.getenv("POSTGRES_PW"),
+                                  host= os.getenv("POSTGRES_URL"))
     
     cursor = connection.cursor()
     
