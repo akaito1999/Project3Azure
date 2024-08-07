@@ -67,7 +67,7 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 | *Azure Service Bus*       |  Basic       |  $0.05/1M operations  |
 | *Azure Storage account*       |  Standard (Hot)      |  $0.05/1M operations  |
 |  Azure App Service        |  Basic (B1)            |  $12.41            |
-|  Azure Function           |  Consumption Plan            |              |
+|  Azure Function           |  Consumption Plan            |       $0.20 per million executions       |
 
 ## Architecture Explanation
 This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
