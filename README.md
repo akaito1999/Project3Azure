@@ -78,12 +78,27 @@ In my project I don't change the structure of the project which show on udacity 
 Azure Functions makes the app development process more productive, and lets you launch serverless applications on Microsoft Azure. It helps in processing data, coordinating with different systems for loT, integrating various processes and systems and building simple APIs and microservices.
 It is autoscalable and allow to handle a huge peak of activity, the web app can't do this cost-effectively. This also, allows to do a division of concerns and create a service for email sending
 
-To Increase this project performace you can use premium version to budget save and better performace.
+Azure Functions can scale automatically based on the number of messages in the queue. This ensures that during peak loads, multiple instances of the function can process emails concurrently, preventing delays
+
+By using Azure Service Bus Queue, the architecture achieves loose coupling between the web application and the email sending service. The web app can place email messages into the queue without worrying about the email service's availability or performance.
+
+The use of Azure Functions to process messages from the Service Bus Queue allows for asynchronous email sending. This means the web app doesn't have to wait for the email to be sent, improving its responsiveness and user experience
 
 - Azure services
 I choose cheapest options to save money because this project is small but you can change to other options for performance like B3 App service plan.
+The Basic B1 tier has limited CPU and memory resources, which may not be sufficient for applications with high traffic or resource-intensive operations.
+Scalability Issues: Inadequate scaling capabilities can lead to performance bottlenecks and increased latency, contributing to HTTP timeout errors during peak usage times.
 
 - Service Bus
 Microsoft Azure Service Bus is a fully managed enterprise integration message broker. Service Bus can decouple applications and services.
 Service Bus offers a reliable and secure platform for asynchronous transfer of data and state.
+
+The Basic tier lacks some advanced features available in higher tiers, such as message sessions, transactions, and duplicate detection.
+Message Processing Delays: If the service bus is under heavy load or if there are inefficient message processing practices, it can cause delays, leading to timeout errors for services dependent on timely message processing.
+
+- Azure Postgres Database 
+Performance Issues: The Standard tier might not provide sufficient performance for applications with high query volumes or complex transactions, leading to slow response times.
+Timeouts: If the database queries take too long to execute due to performance limitations, it can cause HTTP timeout errors on the client side, especially for applications that require real-time data retrieval.
+
+
 
