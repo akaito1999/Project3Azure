@@ -69,6 +69,8 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 |  Azure App Service        |  Basic (B1)       |  $12.41                         |
 |  Azure Function           |  Consumption Plan |  $15.40 for 10000000 Executions |
 
+Total: $43.96
+
 ## Architecture Explanation
 In my project I don't change the structure of the project which show on udacity instruction and only use free and lowest cost I can choose.
 
