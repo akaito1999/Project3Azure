@@ -72,17 +72,17 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 ## Architecture Explanation
 In my project I don't change the structure of the project which show on udacity instruction and only use free and lowest cost I can choose.
 
+Azure Functions can scale automatically based on the number of messages in the queue. This ensures that during peak loads, multiple instances of the function can process emails concurrently, preventing delays
+
+By using Azure Service Bus Queue, the architecture achieves loose coupling between the web application and the email sending service. The web app can place email messages into the queue without worrying about the email service's availability or performance.
+
+The use of Azure Functions to process messages from the Service Bus Queue allows for asynchronous email sending. This means the web app doesn't have to wait for the email to be sent, improving its responsiveness and user experience
 
 - Azure Function: 
 
 Azure Functions makes the app development process more productive, and lets you launch serverless applications on Microsoft Azure. It helps in processing data, coordinating with different systems for loT, integrating various processes and systems and building simple APIs and microservices.
 It is autoscalable and allow to handle a huge peak of activity, the web app can't do this cost-effectively. This also, allows to do a division of concerns and create a service for email sending
 
-Azure Functions can scale automatically based on the number of messages in the queue. This ensures that during peak loads, multiple instances of the function can process emails concurrently, preventing delays
-
-By using Azure Service Bus Queue, the architecture achieves loose coupling between the web application and the email sending service. The web app can place email messages into the queue without worrying about the email service's availability or performance.
-
-The use of Azure Functions to process messages from the Service Bus Queue allows for asynchronous email sending. This means the web app doesn't have to wait for the email to be sent, improving its responsiveness and user experience
 
 - Azure services:
   
